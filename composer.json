@@ -1,0 +1,43 @@
+{
+  "name": "chungou/elasticsearch",
+  "description": "ES客户端",
+  "require": {
+    "php": ">=7.2",
+    "hyperf/framework": "*",
+    "hyperf/utils": "*",
+    "chungou/kernel": "*",
+    "elasticsearch/elasticsearch": "^7.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "authors": [
+    {
+      "name": "chungou",
+      "email": "chungou@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Chungou\\Elasticsearch\\": "src/"
+    },
+    "files": [
+      "src/Tools/functions.php"
+    ]
+  },
+  "extra": {
+    "hyperf": {
+      "config": "Chungou\\Elasticsearch\\ConfigProvider"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.chungoulife.com/"
+    },
+    {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    }
+  ]
+}
