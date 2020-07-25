@@ -423,7 +423,6 @@ class Builder
             $method = $methods[1];
             $client = $this->client->{$methods[0]}();
         }
-        d($method);
         Log::get('elasticsearch', 'sql')->debug('Elasticsearch run', compact('method', 'parameters', 'sql'));
         return call([$client, $method], ... $parameters);
     }
