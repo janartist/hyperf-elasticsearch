@@ -32,7 +32,6 @@ abstract class Model implements Arrayable, Jsonable, JsonSerializable
     public function __construct()
     {
         $this->client = ApplicationContext::getContainer()->get(Client::class);
-        $this->initData();
     }
     /**
      * @return Builder
@@ -64,6 +63,15 @@ abstract class Model implements Arrayable, Jsonable, JsonSerializable
     public function newCollection(array $models = [])
     {
         return new Collection($models);
+    }
+
+    /**
+     * @return $this
+     */
+    public function newInstance()
+    {
+        $model = new static();
+        return $model;
     }
     /**
      * Create a new Model query builder

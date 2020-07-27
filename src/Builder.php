@@ -81,9 +81,10 @@ class Builder
 
         $collection = collect($original)->map(function ($value) {
             $attributes =  $value['_source'] ?? [];
-            $this->model->setAttributes($attributes);
-            $this->model->setOriginal($value);
-            return $this->model;
+            $model = $this->model->newInstance();
+            $model->setAttributes($attributes);
+            $model->setOriginal($value);
+            return $model;
         });
         return make(Paginator::class, ['items' => $collection, 'perPage' => $size, 'currentPage' => $page]);
     }
@@ -116,9 +117,10 @@ class Builder
 
         $collection = collect($original)->map(function ($value) {
             $attributes =  $value['_source'] ?? [];
-            $this->model->setAttributes($attributes);
-            $this->model->setOriginal($value);
-            return $this->model;
+            $model = $this->model->newInstance();
+            $model->setAttributes($attributes);
+            $model->setOriginal($value);
+            return $model;
         });
 
         return $collection;
@@ -240,7 +242,6 @@ class Builder
                 'id' => $id,
             ]
         ]);
-        d($result);
         if (!empty($result['result']) && $result['result'] == 'deleted') {
             return true;
         }
@@ -424,7 +425,7 @@ class Builder
             $client = $this->client->{$methods[0]}();
         }
         Log::get('elasticsearch', 'sql')->debug('Elasticsearch run', compact('method', 'parameters', 'sql'));
-        return call([$client, $method], ... $parameters);
+        return call([$client, $method], $parameters);
     }
     public function highlight($fields)
     {
