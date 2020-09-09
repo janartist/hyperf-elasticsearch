@@ -27,8 +27,7 @@ class Client
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-        $config = $container->get(ConfigInterface::class)->get('elasticsearch', []);
-        $this->config = $config;
+        $this->config = $container->get(ConfigInterface::class)->get('elasticsearch', []);
     }
 
     /**

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Chungou\Elasticsearch;
 
 use Chungou\Core\Log\Log;
-use Chungou\Core\Tools\Arr;
 use Hyperf\Utils\Collection;
 
 class Builder
