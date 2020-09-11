@@ -78,7 +78,7 @@ class Builder
         $result = $this->run('search', $this->sql);
         $original = $result['hits']['hits'] ?? [];
 
-        $collection = collect($original)->map(function ($value) {
+        $collection = Collection::make($original)->map(function ($value) {
             $attributes =  $value['_source'] ?? [];
             $model = $this->model->newInstance();
             $model->setAttributes($attributes);
@@ -114,7 +114,7 @@ class Builder
         $result = $this->run('search', $this->sql);
         $original = $result['hits']['hits'] ?? [];
 
-        $collection = collect($original)->map(function ($value) {
+        $collection = Collection::make($original)->map(function ($value) {
             $attributes =  $value['_source'] ?? [];
             $model = $this->model->newInstance();
             $model->setAttributes($attributes);
@@ -283,7 +283,7 @@ class Builder
     public function createIndex(array $mappings = [], array $settings = [])
     {
         $mappings = Arr::merge(
-            collect($this->model->getCasts())->map(function ($value, $key) {
+            Collection::make($this->model->getCasts())->map(function ($value, $key) {
                 $valued = '';
                 if (is_string($value)) {
                     $valued['type'] = $value;
@@ -293,7 +293,7 @@ class Builder
                 }
                 return $valued;
             })->toArray(),
-            collect($mappings)->map(function ($value, $key) {
+            Collection::make($mappings)->map(function ($value, $key) {
                 $valued = '';
                 if (is_string($value)) {
                     $valued['type'] = $value;

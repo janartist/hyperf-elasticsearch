@@ -34,25 +34,25 @@ trait HasAttributes
      *
      * @var array
      */
-    protected static $primitiveCastTypes = [
-        'array',
-        'bool',
-        'boolean',
-        'collection',
-        'custom_datetime',
-        'date',
-        'datetime',
-        'decimal',
-        'double',
-        'float',
-        'int',
-        'integer',
-        'json',
-        'object',
-        'real',
-        'string',
-        'timestamp',
-    ];
+//    protected static $primitiveCastTypes = [
+//        'array',
+//        'bool',
+//        'boolean',
+//        'collection',
+//        'custom_datetime',
+//        'date',
+//        'datetime',
+//        'decimal',
+//        'double',
+//        'float',
+//        'int',
+//        'integer',
+//        'json',
+//        'object',
+//        'real',
+//        'string',
+//        'timestamp',
+//    ];
     protected function initData() :void
     {
         $this->setOriginal([]);
