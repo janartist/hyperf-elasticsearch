@@ -421,7 +421,7 @@ class Builder
         if (strpos($method, '.')) {
             $methods = explode('.', $method);
             $method = $methods[1];
-            $client = $this->client->{$methods[0]}();
+            $client = $client->{$methods[0]}();
         }
         Log::get('elasticsearch', 'sql')->debug('Elasticsearch run', compact('method', 'parameters', 'sql'));
         return call([$client, $method], $parameters);
