@@ -1,5 +1,10 @@
 # ES客户端 - hyperf版本
 
+### Composer
+
+```
+composer requrie janartist/elasticsearch dev-dev
+```
 
 ### Model
 
