@@ -3,7 +3,7 @@
 ### Composer
 
 ```
-composer requrie janartist/elasticsearch dev-dev
+composer require janartist/elasticsearch
 ```
 
 ### Model
