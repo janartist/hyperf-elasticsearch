@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ChungouTest\Elasticsearch;
+namespace JanartistTest\Elasticsearch;
 
 use Chungou\Elasticsearch\Client;
 use Hyperf\Utils\ApplicationContext;

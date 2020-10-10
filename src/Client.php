@@ -5,7 +5,7 @@ declare(strict_types=1);
  * ES客户端
  */
 
-namespace Chungou\Elasticsearch;
+namespace Janartist\Elasticsearch;
 
 use Elasticsearch\ClientBuilder;
 use Hyperf\Guzzle\RingPHP\PoolHandler;

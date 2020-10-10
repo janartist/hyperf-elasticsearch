@@ -5,7 +5,7 @@ declare(strict_types=1);
  * 属性
  */
 
-namespace Chungou\Elasticsearch;
+namespace Janartist\Elasticsearch;
 
 trait HasAttributes
 {

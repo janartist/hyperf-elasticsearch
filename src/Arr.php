@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Chungou\Elasticsearch;
+namespace Janartist\Elasticsearch;
 
 use Hyperf\Utils\Arr as Arrs;
 

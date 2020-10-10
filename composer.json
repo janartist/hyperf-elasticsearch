@@ -1,5 +1,5 @@
 {
-  "name": "chungou/elasticsearch",
+  "name": "janartist/elasticsearch",
   "description": "ES客户端",
   "require": {
     "php": ">=7.2",
@@ -12,18 +12,18 @@
   },
   "authors": [
     {
-      "name": "chungou",
-      "email": "chungou@gmail.com"
+      "name": "jan",
+      "email": "1688609@gmail.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Chungou\\Elasticsearch\\": "src/"
+      "Janartist\\Chungou\\Elasticsearch\\": "src/"
     }
   },
   "extra": {
     "hyperf": {
-      "config": "Chungou\\Elasticsearch\\ConfigProvider"
+      "config": "Janartist\\Elasticsearch\\ConfigProvider"
     }
   },
   "repositories": [

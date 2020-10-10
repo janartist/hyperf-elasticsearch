@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Chungou\Elasticsearch;
+namespace Janartist\Elasticsearch;
 
-use Chungou\Core\Log\Log;
+use Janartist\Core\Log\Log;
 use Hyperf\Utils\Collection;
 
 class Builder
