@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace App\EsModel;
 
-use Chungou\Elasticsearch\Model;
+use Janartist\Elasticsearch\Model;
 
 class OrderModel extends Model
 {
