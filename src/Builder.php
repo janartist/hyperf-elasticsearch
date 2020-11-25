@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Janartist\Elasticsearch;
 
-use Janartist\Core\Log\Log;
+use Hyperf\Logger\LoggerFactory;
+use Hyperf\Utils\ApplicationContext;
 use Hyperf\Utils\Collection;
 
 class Builder
@@ -423,7 +424,10 @@ class Builder
             $method = $methods[1];
             $client = $client->{$methods[0]}();
         }
-        Log::get('elasticsearch', 'sql')->debug('Elasticsearch run', compact('method', 'parameters', 'sql'));
+        ApplicationContext::getContainer()
+            ->get(LoggerFactory::class)
+            ->get('elasticsearch', 'default')
+            ->debug('Elasticsearch run', compact('method', 'parameters', 'sql'));
         return call([$client, $method], $parameters);
     }
     public function highlight($fields)
