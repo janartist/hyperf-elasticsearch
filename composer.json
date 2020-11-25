@@ -29,10 +29,6 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://packagist.chungoulife.com/"
-    },
-    {
-      "type": "composer",
       "url": "https://mirrors.aliyun.com/composer/"
     }
   ]
